@@ -1,0 +1,64 @@
+:root {
+    --main-color: rgb(22, 94, 157);
+    --fontWeight:600;
+  }
+
+#homePageMainContainer{
+    position: relative;
+    width: 100vw;
+    height: 100vh;
+}
+
+#rightAndLeftHolder{
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    height: calc(100% - 65px);
+    overflow: hidden;
+}
+
+#leftSideBar{
+    width: 25%;
+    height: 100%;
+    padding:20px 10px;
+    box-shadow: 5px 0px 5px rgb(235, 235, 235);
+}
+
+#leftSideBarLinksContainer{
+    display: flex;
+    flex-direction: column;
+    row-gap: 30px;
+    height: 100%;
+    width: 100%;
+    padding-left: 10px;
+    padding-top: 10px;
+}
+.navLinkItem > svg{
+    height: 25px;
+    margin-right: 10px;
+}
+.navLinkItem{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    font-size: 1.2rem;
+    text-decoration: none;
+    color: rgb(2, 62, 115);
+    font-weight: var(--fontWeight);
+}
+
+#rightSideBar{
+    padding: 20px;
+    height: 100%;
+    width: 100%;
+    overflow-x: hidden;
+    overflow-y: auto;
+}
+
+
+/* For tablets and mobile devices */
+@media (max-width: 991.98px) {
+    #leftSideBar{
+        display: none;
+    }
+}

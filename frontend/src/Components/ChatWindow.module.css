@@ -1,0 +1,123 @@
+.online{
+    padding-left: 5px;
+    color: rgba(0, 128, 0, 0.835);
+    font-weight: 505;
+    font-size: 0.9rem;
+}
+
+.offline{
+    padding-left: 5px;
+    color: rgba(255, 0, 0, 0.834);
+    font-weight: 505;
+    font-size: 0.9rem;
+}
+
+#chatWindowMainContainer{
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    box-shadow: 0px 0px 10px rgb(132, 132, 132);
+    border-radius: 5px;
+    width: 100%;
+}
+
+#userInfo{
+    display: flex;
+    flex-direction: row; 
+    height: 80px;
+    box-shadow: 0px 5px 5px rgb(227, 227, 227);
+    align-items: center;
+    padding: 0px 10px;
+    column-gap: 20px;
+}
+
+#userInfo > i{
+    background-color: black;
+    color: white;
+    border-radius: 50%;
+    padding: 5px;
+    font-size: 1.2rem;
+    cursor: pointer; 
+}
+
+#userInfo > div{
+    display: flex;
+    flex-direction: column;
+}
+
+.username{
+    font-weight: 550;
+    font-size: 1.1rem;
+}
+
+#chatsContainer{
+    height: calc(100% - 80px);
+    width: 100%;
+}
+
+#chats{
+    height: 90%;
+    overflow-y: auto;
+    padding-top: 10px;
+}
+
+.senderMessageContainer{
+    padding: 10px 10px;
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-end;
+    padding-left: 55%;
+}
+
+.senderMessage{
+    background-color: rgb(66, 66, 66);
+    background-color: rgb(40, 79, 133);
+    color: white;
+    padding: 5px 15px;
+    border-top-left-radius: 10px;
+    border-bottom-left-radius: 10px;
+    border-top-right-radius: 10px;
+}
+
+.receiverMessageContainer{
+    padding: 10px 10px;
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    padding-right: 55%;
+}
+
+.receiverMessage{
+    background-color: rgb(255, 255, 255);
+    color: black;
+    padding: 5px 15px;
+    border-top-right-radius: 10px;
+    border-bottom-right-radius: 10px;
+    border-top-left-radius: 10px;
+    box-shadow: 0px 0px 5px rgb(178, 178, 178);
+}
+
+#sendMessageContainer{
+    box-shadow: 0px 0px 10px rgb(132, 132, 132);
+    height: 10%;
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    padding: 10px 20px;
+}
+
+#sendMessageContainer > input{
+    width: 97%;
+    padding: 5px 10px;
+    outline: none;
+    border: 1px solid rgb(180, 180, 180);
+    border-radius: 5px;
+}
+
+#sendMessageContainer  i {
+    font-size: 1.2rem;
+    transform: translateY(5px);
+    border-radius: 5px;
+    margin-left: 10px;
+    cursor: pointer;
+}

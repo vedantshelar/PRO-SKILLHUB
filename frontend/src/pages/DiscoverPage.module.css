@@ -1,0 +1,123 @@
+#discoverPageMainContainer{
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+}
+
+#discoverPageMainContainer  > h1{
+    font-size: 1.5rem;
+    font-weight: 600;
+    color: rgb(0, 58, 128);
+}
+
+#discoverSearchBox{
+    outline: none;
+    margin: 10px 0px;
+    padding: 10px 10px;
+    color: gray;
+    border: 1px solid rgb(226, 226, 226);
+    border-radius: 5px;
+}
+
+#discoverPageCardContainer{
+    display: flex;
+    flex-direction: column;
+    row-gap: 10px;
+    margin:20px 0px;
+}
+
+.discoverCard{
+    box-shadow: 2px 5px 5px rgb(234, 234, 234);
+    height: 85px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    padding: 15px 10px;
+    column-gap: 15px;
+    cursor: pointer;
+}
+
+.discoverCardImg{
+    height: 65px;
+    width: 65px;
+    object-fit: cover;
+    border-radius: 50%;
+    box-shadow: 0px 0px 5px rgb(230, 230, 230);
+}
+
+.discoverCardName{
+    font-size: 1.1rem;
+    font-weight: 600;
+    color: rgb(2, 62, 115);
+}
+
+.discoverCardUsername{
+    font-size: 0.8rem;
+    margin-left: 2px;
+    color: rgba(2, 62, 115, 0.766);
+}
+
+.discoverAcceptRejectContainer{
+    display: flex;
+    flex-direction: row;
+    column-gap: 5px;
+}
+
+.discoverAcceptRejectContainer > button{
+    border: 1px solid rgb(2, 62, 115);
+    background-color: white;
+    width: 70px;
+    padding: 5px 0px;
+    border-radius: 10px;
+    color: rgba(2, 62, 115, 0.766);
+    font-size: 0.7rem;
+    background-color: rgba(239, 248, 255, 0.56);
+    cursor: pointer;
+}
+
+
+/* For tablets and mobile devices */
+@media (max-width: 991.98px) {
+
+    #discoverPageMainContainer  > h1{
+        font-size: 1.1rem;
+    }
+    
+    #discoverSearchBox{
+        margin: 10px 0px;
+        padding: 8px 5px;
+    }
+
+    .discoverCard{
+        height: 70px;
+        padding: 10px 5px;
+    }
+    
+    #discoverPageCardContainer{
+        display: flex;
+        flex-direction: column;
+        row-gap: 10px;
+        margin:20px 0px;
+    }
+    
+    .discoverCardImg{
+        height: 45px;
+        width: 45px;
+    }
+    
+    .discoverCardName{
+        font-size: 0.9rem;
+        font-weight: 600;
+    }
+    
+    .discoverCardUsername{
+        font-size: 0.7rem;
+        margin-left: 2px;
+    }
+
+    .discoverAcceptRejectContainer > button{
+        font-size: 0.7rem;
+    }
+
+}

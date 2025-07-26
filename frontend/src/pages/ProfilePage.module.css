@@ -1,0 +1,642 @@
+:root {
+    --main-color: rgb(22, 94, 157);
+    --fontWeight: 600;
+}
+
+#profileMainContainer {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    position: relative;
+}
+
+#profileHeroContainer {
+    width: 100%;
+    height: 250px;
+    position: relative;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    border-radius: 10px;
+    margin-bottom: 70px;
+}
+
+#profileHeroContainer:hover #bgProfileBtn {
+    display: flex;
+}
+
+#bgProfileBtn {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    border-radius: 10px;
+    background-color: rgba(0, 0, 0, 0.456);
+    display: none;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    font-weight: 600;
+    cursor: pointer;
+}
+
+#blackImg {
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.128);
+    position: absolute;
+    z-index: 50%;
+}
+
+#profileImgContainer {
+    width: 90px;
+    box-shadow: 0px 0px 5px rgb(235, 235, 235);
+    border-radius: 50%;
+    position: absolute;
+    z-index: 100%;
+    bottom: -40px;
+    left: 50px;
+    cursor: pointer;
+}
+
+#profileImg {
+    position: relative;
+    width: 90px;
+    height: 90px;
+    object-fit: cover;
+    border-radius: 50%;
+    z-index: 50%;
+}
+
+#editProfileImgBtn {
+    position: absolute;
+    font-weight: 600;
+    background-color: rgba(0, 0, 0, 0.769);
+    width: 100%;
+    height: 100%;
+    color: white;
+    text-align: center;
+    top: 0px;
+    border-radius: 50%;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    box-shadow: 0px 0px 5px black;
+    display: flex;
+    visibility: hidden;
+}
+
+#profileImgContainer:hover #editProfileImgBtn {
+    visibility: visible;
+}
+
+#profileInfoContainer {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    margin-left: 40px;
+}
+
+#profileUsernameAndBioContainer {
+    width: 100%;
+}
+
+#profileUsernameAndNameContainer {
+    display: flex;
+    flex-direction: row;
+    column-gap: 20px;
+    margin-bottom: 20px;
+}
+
+#name {
+    font-size: 1.2rem;
+    font-weight: 600;
+    color: rgb(0, 58, 128);
+    outline: none;
+    border: none;
+}
+
+#username {
+    font-size: 0.9rem;
+    color: rgba(0, 58, 128, 0.778);
+    margin-left: 2px;
+}
+
+#followersContainer {
+    display: flex;
+    flex-direction: row;
+    column-gap: 10px;
+    margin-left: 10px;
+}
+
+#followBtn {
+    width: 100px;
+    cursor: pointer;
+    outline: none;
+    border: none;
+    border-radius: 20px;
+    background-color: rgb(0, 58, 128);
+    cursor: pointer;
+    color: rgb(255, 255, 255);
+    font-weight: 600;
+    height: 30px;
+}
+
+#followersContainer>p {
+    border-radius: 20px;
+    font-size: 0.8rem;
+    background-color: rgb(0, 58, 128);
+    color: rgb(255, 255, 255);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 5px 20px;
+    font-weight: 600;
+    transform: translateY(-3px);
+}
+
+#profileBioContainer {
+    width: 100%;
+}
+
+#bio {
+    width: 80%;
+    outline: none;
+    border: none;
+    color: gray;
+    margin-bottom: 10px;
+}
+
+#profileWorkContainer {
+    width: 100%;
+    margin-top: 50px;
+}
+
+#profileWorkContainer>p {
+    font-size: 1.2rem;
+    font-weight: 600;
+    color: rgb(0, 58, 128);
+    margin-bottom: 10px;
+}
+
+#workInfoCardContainer {
+    width: 90%;
+    display: flex;
+    gap: 15px;
+    flex-wrap: wrap;
+}
+
+.workInfoCard {
+    padding: 15px 20px;
+    border-radius: 5px;
+    box-shadow: 2px 5px 5px rgb(192, 192, 192);
+    position: relative;
+}
+
+.workInfoCard>i {
+    position: absolute;
+    top: -5px;
+    right: -5px;
+    font-size: 1rem;
+}
+
+.companyName {
+    font-size: 1rem;
+    font-weight: 600;
+    color: black;
+    margin-bottom: 5px;
+}
+
+.position {
+    font-size: 0.9rem;
+    color: gray;
+}
+
+.experience {
+    font-size: 0.9rem;
+    color: gray;
+}
+
+#addWorkBtn {
+    font-weight: 600;
+    background-color: rgb(0, 58, 128);
+    border: none;
+    color: white;
+    padding: 0px 10px;
+    border-radius: 10px;
+    cursor: pointer;
+    height: 50px;
+}
+
+#projectMainContainer {
+    width: 100%;
+    margin-top: 50px;
+    margin-bottom: 50px;
+}
+
+
+#projectMainContainer>p {
+    font-size: 1.2rem;
+    font-weight: 600;
+    color: rgb(0, 58, 128);
+    margin-bottom: 10px;
+}
+
+#projectContainer {
+    width: 90%;
+    display: flex;
+    gap: 15px;
+    flex-wrap: wrap;
+}
+
+.projectCard {
+    width: 200px;
+    height: 235px;
+    box-shadow: 2px 5px 5px rgb(192, 192, 192);
+    padding: 5px;
+    position: relative;
+}
+
+.projectCard>i {
+    position: absolute;
+    top: -5px;
+    right: -5px;
+    font-size: 1rem;
+}
+
+.projectImg {
+    width: 100%;
+    height: 100px;
+    object-fit: cover;
+    border-radius: 5px;
+}
+
+.projectHeading {
+    font-size: 1rem;
+    font-weight: 600;
+    margin-top: 5px;
+}
+
+.projectDescription {
+    color: gray;
+    font-size: 0.8rem;
+    margin-top: 5px;
+    height: 58px;
+}
+
+.projectViewBtn {
+    width: 100%;
+    border-radius: 10px;
+    margin-top: 7px;
+    border: none;
+    padding: 5px 0px;
+    cursor: pointer;
+    background-color: rgb(77, 117, 166);
+    border: none;
+    color: white;
+}
+
+.singleProjectCard {
+    width: 100%;
+    box-shadow: 2px 5px 5px rgb(192, 192, 192);
+    padding: 5px;
+}
+
+.singleProjectImg {
+    width: 100%;
+    height: 400px;
+    object-fit: cover;
+}
+
+.singProjectHeading {
+    font-size: 2rem;
+    font-weight: 600;
+    margin-top: 10px;
+
+}
+
+.singleProjectDescription {
+    color: gray;
+    font-size: 1rem;
+    margin-top: 5px;
+    margin-left: 5px;
+}
+
+.projectImgsContainer {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    gap: 5px;
+    margin-left: 5px;
+    padding: 5px 0px;
+}
+
+.projectImgsContainer>a {
+    background-color: green;
+    color: white;
+    text-decoration: none;
+    font-size: 0.9rem;
+    padding: 5px;
+    border-radius: 5px;
+}
+
+.singProjectViewBtn {
+    width: 100px;
+    border-radius: 10px;
+    margin-top: 7px;
+    border: none;
+    padding: 10px 0px;
+    cursor: pointer;
+    background-color: rgb(77, 117, 166);
+    border: none;
+    color: white;
+    font-size: 1.2rem;
+}
+
+.uploadBtn {
+    font-weight: 600;
+    background-color: rgb(15, 128, 0);
+    border: none;
+    color: white;
+    padding: 0px 10px;
+    border-radius: 10px;
+    cursor: pointer;
+    position: fixed;
+    z-index: 200;
+    right: 20px;
+    bottom: 50px;
+    font-size: 1rem;
+    padding: 10px;
+}
+
+#modalMainContainer {
+    position: absolute;
+    z-index: 100%;
+    height: 100%;
+    width: 100%;
+    background-color: rgba(0, 0, 0, 0.646);
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+}
+
+#modal {
+    position: relative;
+    z-index: 200%;
+    background-color: white;
+    width: 50%;
+    padding: 20px 20px;
+    border-radius: 10px;
+    display: flex;
+    flex-direction: column;
+    row-gap: 10px;
+}
+
+#modal>input {
+    padding: 10px 5px;
+    outline: none;
+    color: gray;
+}
+
+#modal>button {
+    align-self: flex-end;
+    padding: 10px 5px;
+    background-color: rgb(15, 128, 0);
+    border: none;
+    color: white;
+    border-radius: 5px;
+    font-weight: 600;
+    cursor: pointer;
+    margin-top: 5px;
+}
+
+#followBtn {
+    border: 1px solid rgb(2, 62, 115);
+    background-color: white;
+    width: 100px;
+    padding: 5px 0px;
+    border-radius: 10px;
+    color: rgba(2, 62, 115, 0.766);
+    font-size: 1rem;
+    background-color: rgba(239, 248, 255, 0.56);
+    cursor: pointer;
+    margin-left: 10px;
+}
+
+
+/* ////////////////////////////////////////// */
+
+/* For tablets and mobile devices */
+
+
+@media (max-width: 991.98px) {
+
+    #profileInfoContainer {
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+        margin-left: 0px;
+        overflow: hidden;
+    }
+
+    #profileUsernameAndBioContainer {
+        width: 100%;
+    }
+
+    #profileUsernameAndNameContainer {
+        display: flex;
+        flex-direction: column;
+        row-gap: 20px;
+        margin-bottom: 20px;
+        width: 100%;
+    }
+
+    #name {
+        font-size: 1.1rem;
+    }
+
+    #username {
+        font-size: 0.9rem;
+    }
+
+    #followersContainer {
+        margin-left: 0px;
+    }
+
+    #followBtn {
+        width: 100px;
+        transform: translateY(-3px);
+        height: 25px !important;
+        font-size: 0.6rem !important;
+    }
+
+    #followersContainer>p {
+        font-size: 0.6rem;
+        transform: translateY(-3px);
+    }
+
+    #profileWorkContainer {
+        width: 100%;
+        margin-top: 50px;
+    }
+
+    #profileWorkContainer>p {
+        font-size: 1rem;
+    }
+
+    #workInfoCardContainer {
+        width: 90%;
+        display: flex;
+        gap: 10px;
+        flex-wrap: wrap;
+    }
+
+    .workInfoCard {
+        padding: 15px 20px;
+        border-radius: 5px;
+        box-shadow: 2px 5px 5px rgb(192, 192, 192);
+        position: relative;
+    }
+
+    .workInfoCard>p {
+        font-size: 0.7rem;
+    }
+
+    .workInfoCard>i {
+        position: absolute;
+        top: -5px;
+        right: -4px;
+        font-size: 0.8rem;
+    }
+
+    #addWorkBtn {
+        height: 30px;
+    }
+
+    #projectMainContainer>p {
+        font-size: 1rem;
+    }
+
+    #projectContainer {
+        width: 100%;
+        display: flex;
+        column-gap: 10px;
+        row-gap: 25px;
+        flex-wrap: wrap;
+    }
+
+    .projectCard {
+        width: 47%;
+        height: 235px;
+        box-shadow: 2px 2px 2px rgba(224, 224, 224, 0.674);
+        padding: 5px;
+        position: relative;
+    }
+
+    .projectCard>i {
+        position: absolute;
+        top: -5px;
+        right: -5px;
+        font-size: 0.8rem;
+    }
+
+    .projectImg {
+        width: 100%;
+        height: 100px;
+        object-fit: cover;
+        border-radius: 5px;
+    }
+
+    .projectHeading {
+        font-size: 0.9rem;
+    }
+
+    .projectDescription {
+        font-size: 0.7rem;
+    }
+
+    .projectViewBtn {
+        border-radius: 5px;
+        margin-top: 7px;
+        font-size: 0.7rem;
+    }
+
+    .singleProjectCard {
+        width: 100%;
+        box-shadow: 2px 5px 5px rgb(192, 192, 192);
+        padding: 5px;
+    }
+
+    .singleProjectImg {
+        width: 100%;
+        height: 300px;
+        object-fit: cover;
+    }
+
+    .singProjectHeading {
+        font-size: 1.2rem;
+    }
+
+    .singleProjectDescription {
+        font-size: 0.8rem;
+    }
+
+    .projectImgsContainer>a {
+        font-size: 0.6rem;
+        padding: 5px 10px;
+        border-radius: 20px;
+    }
+
+    .singProjectViewBtn {
+        width: 80px;
+        border: none;
+        padding: 5px 0px;
+        font-size: 0.8rem;
+    }
+
+    .uploadBtn {
+        font-weight: 600;
+        background-color: rgb(15, 128, 0);
+        border: none;
+        color: white;
+        padding: 0px 10px;
+        border-radius: 10px;
+        cursor: pointer;
+        position: fixed;
+        z-index: 200;
+        right: 10px;
+        bottom: 50px;
+        font-size: 1rem;
+        padding: 10px;
+    }
+
+    #modal {
+        z-index: 200;
+        width: 90%;
+    }
+
+    #modal>input {
+        padding: 5px 5px;
+        outline: none;
+        color: gray;
+    }
+
+    #modal>button {
+        padding: 5px 5px;
+    }
+
+    #followBtn {
+        border: 1px solid rgb(2, 62, 115);
+        background-color: white;
+        width: 100px;
+        padding: 5px 0px;
+        border-radius: 10px;
+        color: rgba(2, 62, 115, 0.766);
+        font-size: 1rem;
+        background-color: rgba(239, 248, 255, 0.56);
+        cursor: pointer;
+        margin-left: 10px;
+    }
+
+
+}
