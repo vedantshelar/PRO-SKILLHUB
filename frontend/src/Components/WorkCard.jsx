@@ -1,5 +1,5 @@
 import styles from "../pages/ProfilePage.module.css";
-
+ 
 function WorkCard({work,removeWork,isOwner}) { 
     return (
         <div className={styles.workInfoCard}>
