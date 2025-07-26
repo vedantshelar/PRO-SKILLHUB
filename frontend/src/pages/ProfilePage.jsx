@@ -381,7 +381,7 @@ function ProfilePage() {
                         </div>
                     </div>
                     <div id={styles.profileWorkContainer}>
-                        <p>Work History</p>
+                        <p>My Experiences</p>
                         <div id={styles.workInfoCardContainer}>
                             {user.works.length === 0 ? <span style={{ fontSize: "0.9rem" }}>not added yet</span> : user.works.map((work, indx) => {
                                 return (<WorkCard key={indx} work={work} removeWork={removeWork} isOwner={currUser !== null && currUser._id === user._id}/>)
@@ -408,9 +408,9 @@ function ProfilePage() {
                 </div>
                 <div style={{ display: workModal ? "flex" : "none" }} id={styles.modalMainContainer} onClick={() => { toggleWorkModalModal(false) }}>
                     <form id={styles.modal} onClick={(e) => { e.stopPropagation(); }}>
-                        <input type="text" placeholder="Enter Company Name" name="name" value={workModalForm.name} onChange={handleWorkModalForm} />
-                        <input type="text" placeholder="Enter Position" name="position" value={workModalForm.position} onChange={handleWorkModalForm} />
-                        <input type="number" placeholder="Enter Year of Experience" name="experience" value={workModalForm.experience} onChange={handleWorkModalForm} />
+                        <input type="text" placeholder="Enter Title " name="name" value={workModalForm.name} onChange={handleWorkModalForm} />
+                        <input type="text" placeholder="Enter Position : eg: web developer" name="position" value={workModalForm.position} onChange={handleWorkModalForm} />
+                        <input type="number" placeholder="Enter Experience in months" name="experience" value={workModalForm.experience} onChange={handleWorkModalForm} />
                         {currUser !== null && user._id === currUser._id ? <button type="button" onClick={addWork}>Add Work</button> : null}
                     </form>
                 </div>

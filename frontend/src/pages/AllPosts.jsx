@@ -50,6 +50,7 @@ function AllPostsPage() {
         setUploading(false);
         setFile(null);
         setContent("");
+        setFlag(false);
         getAllPosts();
     }
 

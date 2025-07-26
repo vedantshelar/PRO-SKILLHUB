@@ -81,6 +81,11 @@ position: relative;
 z-index: 100%;
 }
 
+.postContainer > i{
+  position: absolute;
+  right: 10px;
+}
+
 .postProfilePic{
   width: 55px;
   height: 55px;

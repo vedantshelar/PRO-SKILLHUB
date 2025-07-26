@@ -73,10 +73,30 @@ const uploadPostImgAndContent = async(req,res,next)=>{
     }
 };
 
+const destroyPost = async(req,res,next)=>{
+    try {
+        const userId = req.params.userId;
+        const postId = req.params.postId;
+        const post = await Post.findById(postId);
+        if(post.owner.toString() === userId){
+            if(post.postImg.public_id){
+                await cloudinary.uploader.destroy(post.postImg.public_id);
+            }
+            await Post.findByIdAndDelete(postId);
+            res.json({success:"Post Deleted!"})
+        }else{
+            res.json({error:"Error while deleting this post! please try again"});
+        }
+    } catch (error) {
+        next(error);
+    }
+}
+
 module.exports = {
     getAllPosts,
     createNewPost,
     likePost,
     unlikePost,
-    uploadPostImgAndContent
+    uploadPostImgAndContent,
+    destroyPost
 }

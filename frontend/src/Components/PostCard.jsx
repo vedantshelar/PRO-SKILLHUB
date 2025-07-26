@@ -7,6 +7,7 @@ function PostCard({ post, currUser, socket, getAllPosts }) {
     let [isPostLike, setIsPostLike] = useState(false);
     let [toggleComment, setToggleComment] = useState(false);
     let [comment, setComment] = useState("");
+    let [isPostDeleting,setIsPostDeleting] = useState(false);
     const chatContainerRef = useRef(null);
     function opentCommentBox() {
         setToggleComment(true);
@@ -50,6 +51,15 @@ function PostCard({ post, currUser, socket, getAllPosts }) {
         }
     }
 
+    async function destroyPost() {
+        setIsPostDeleting(true);
+        const res = await axios.post(`/post/${currUser._id}/${post._id}/destroy`);
+        if(res.data.success){
+            getAllPosts();
+        }
+        setIsPostDeleting(false);
+    }
+
     useEffect(() => {
         // Auto-scroll to bottom
         if (chatContainerRef.current) {
@@ -86,9 +96,10 @@ function PostCard({ post, currUser, socket, getAllPosts }) {
                 <img className={styles.postProfilePic} src={post.owner.profilePic} alt="profle pic" />
             </div>
             <div className={styles.postInfoContainer}>
+            {isPostDeleting && <span>deleting....</span>}
                 <p className={styles.postName}>{post.owner.name}</p>
                 <p className={styles.postUserName}>{post.owner.username}</p>
-                <p className={styles.postContent}>{post.content}</p>
+                <p className={styles.postContent}>{post.content}</p> 
                 {post.postImg.url !== "" && <img src={post.postImg.url} alt="post image" className={styles.postImg} />}
                 {currUser !== null && (<div className={styles.postMediaControls}>
                     {isPostLike ? <span className={styles.likeBtn}><i onClick={likeAndUnlikePost} className="fa-solid fa-heart" style={{ color: "#ff2465" }}></i>{post.likes.length}</span> : <span className={styles.likeBtn}><i onClick={likeAndUnlikePost} className="fa-regular fa-heart"></i>{post.likes.length}</span>}
@@ -96,6 +107,7 @@ function PostCard({ post, currUser, socket, getAllPosts }) {
                     <span className={styles.shareBtn}><i className="fa-solid fa-share-nodes"></i></span>
                 </div>)}
             </div>
+            {currUser!==null && currUser._id===post.owner._id ? <i className="fa-solid fa-trash" style={{ color: "#dc1e1e", cursor: "pointer" }} onClick={destroyPost}></i> : null}
         </div>
     );
 }
