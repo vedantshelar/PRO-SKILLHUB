@@ -79,7 +79,7 @@ function AllPostsPage() {
                     <button style={{ display: flag ? "block" : "none" }} id={styles.postBtn} onClick={createPost}>Post</button>
                 </div> ): null}
                 <div id={styles.allPostsContainer}>
-                    {posts.length === 0 ? <h3>No Posts Available</h3> :  posts.map((post,indx)=>{
+                    {posts.length === 0 ? <h3>Loading...</h3> :  posts.map((post,indx)=>{
                         return (<PostCard key={indx} post={post} currUser={currUser} socket={socket}  getAllPosts={getAllPosts}/>);
                     })}
                 </div>
